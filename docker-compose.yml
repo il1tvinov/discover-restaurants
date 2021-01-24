@@ -1,0 +1,12 @@
+version: "3.7"
+
+services:
+  discovery:
+    container_name: discovery
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    command: "uvicorn main:app --reload --host 0.0.0.0 --port 8000"
+    restart: "on-failure"
