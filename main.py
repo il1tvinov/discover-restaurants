@@ -1,20 +1,20 @@
 from fastapi import FastAPI
 
-from schemas.discover import DiscoverRestaurants
+from schemas.discovery import DiscoverRestaurants
 from restaurants.restaurants import read_restaurants
-from restaurants.discover import discover_restaurants
+from restaurants.discovery import discover_restaurants
 
 
 app = FastAPI()
 
 
 @app.post(
-    path="/discover/",
+    path="/discovery/",
     response_model=DiscoverRestaurants,
-    tags=["discover"],
+    tags=["discovery"],
     summary="Fetch groups of restaurants based on user's location.",
 )
-def discover(lat: float, lon: float):
+def discovery(lat: float, lon: float):
     user_location = [lon, lat]
 
     restaurants = read_restaurants().get("restaurants")

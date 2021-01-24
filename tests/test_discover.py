@@ -1,4 +1,4 @@
-from restaurants.discover import discover_restaurants
+from restaurants.discovery import discover_restaurants
 
 
 def test_discover_restaurants(

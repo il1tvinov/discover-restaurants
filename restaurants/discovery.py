@@ -12,11 +12,11 @@ from .restaurants import RestaurantsType
 def discover_restaurants(
     restaurants: RestaurantsType, user_location: LocationType
 ) -> RestaurantsType:
-    """Generate payload for '/discover/' route
+    """Generate payload for '/discovery/' route
 
     :param restaurants: List of restaurants
     :param user_location: Coordinates of the user's location
-    :return: Payload for discover root
+    :return: Payload for discovery route
     """
 
     closest_restaurants = filter_by_distance(
