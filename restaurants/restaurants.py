@@ -13,11 +13,11 @@ RestaurantsType = List[RestaurantType]
 
 def read_restaurants(
     input_file: Path = RESTAURANTS_PATH,
-) -> Dict[str, RestaurantsType]:
+) -> RestaurantsType:
     """Read input file containing restaurants data
 
     :param input_file: Path to the input file containing restaurants data
-    :return: Restaurants data
+    :return: List of restaurants
     """
     with open(input_file) as restaurants:
-        return json.load(restaurants)
+        return json.load(restaurants).get("restaurants")

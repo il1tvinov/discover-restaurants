@@ -17,7 +17,7 @@ app = FastAPI()
 def discovery(lat: float, lon: float):
     user_location = [lon, lat]
 
-    restaurants = read_restaurants().get("restaurants")
+    restaurants = read_restaurants()
 
     discover_payload = discover_restaurants(
         restaurants=restaurants, user_location=user_location
