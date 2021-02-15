@@ -1,5 +1,5 @@
 # discover-restaurants
-Backend tech-assignment for Wolt.  
+Backend tech-assignment.  
 The application is implemented as a single endpoint providing restaurants suggestions based on user's location.
 
 ## Getting started
